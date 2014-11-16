@@ -143,12 +143,12 @@ void build_mainwindow(void)
 
     next_tab = g_cclosure_new_swap(G_CALLBACK(mainwindow_next_tab), 
         NULL, NULL);
-    gtk_accel_group_connect(accel_group, GDK_Page_Up, conf_get_key_mod(),
+    gtk_accel_group_connect(accel_group, 'n', conf_get_key_mod(),
         GTK_ACCEL_VISIBLE, next_tab);
 
     prev_tab = g_cclosure_new_swap(G_CALLBACK(mainwindow_prev_tab), 
         NULL, NULL);
-    gtk_accel_group_connect(accel_group, GDK_Page_Down, conf_get_key_mod(),
+    gtk_accel_group_connect(accel_group, 'p', conf_get_key_mod(),
         GTK_ACCEL_VISIBLE, prev_tab);
 
     delete_all = g_cclosure_new_swap(G_CALLBACK(mainwindow_destroy), 
